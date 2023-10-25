@@ -1,0 +1,19 @@
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  justify-content: space-around;
+  padding: 0px 10em; }
+
+.hamburgerImg {
+  width: 3em; }
+
+.logoImg {
+  width: 4em; }
+
+.navbarIcon {
+  display: flex;
+  gap: 1em; }
+
+.pointerCursor {
+  cursor: pointer; }
