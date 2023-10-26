@@ -54,31 +54,35 @@ function Homepge() {
           <span className='explore-categoryheading'>Explore Categories</span>
         </div>
         <div className='explore-categories-images-section'>
-          <div class="explore-category-image-wrapper" data-aos="fade-up">
+          <div className="explore-category-image-wrapper" data-aos="fade-up">
             <img src={slingBag} alt="Image 1"/>
-            <button class="image-button">Sling Bags</button>
+            <button className="image-button">Sling Bags</button>
           </div>
-          <div class="explore-category-image-wrapper" data-aos="fade-up">
+          <div className="explore-category-image-wrapper" data-aos="fade-up">
             <img src={toteBag} alt="Image 2"/>
-            <button class="image-button">Tote Bags</button>
+            <button className="image-button">Tote Bags</button>
           </div>
-          <div class="explore-category-image-wrapper" data-aos="fade-up">
+          <div className="explore-category-image-wrapper" data-aos="fade-up">
             <img src={shoulderBag} alt="Image 3"/>
-            <button class="image-button">Shoulder Bags</button>
+            <button className="image-button">Shoulder Bags</button>
           </div>
-          <div class="explore-category-image-wrapper" data-aos="fade-up">
+          <div className="explore-category-image-wrapper" data-aos="fade-up">
             <img src={handBag} alt="Image 4"/>
-            <button class="image-button">HandBags</button>
+            <button className="image-button">HandBags</button>
           </div>
-          <div class="explore-category-image-wrapper" data-aos="fade-up" >
+          <div className="explore-category-image-wrapper" data-aos="fade-up" >
             <img src={laptopBag} alt="Image 5"/>
-            <button class="image-button">Laptop Bags</button>
+            <button className="image-button">Laptop Bags</button>
           </div>
-          <div class="explore-category-image-wrapper" data-aos="fade-up">
+          <div className="explore-category-image-wrapper" data-aos="fade-up">
             <img src={walletBag} alt="Image 6"/>
-            <button class="image-button">Wallets</button>
+            <button className="image-button">Wallets</button>
           </div>
           </div>
+      </div>
+      <div className='multiple-banner'>
+        <span>Design your appearance in a <br></br> unique manner</span>
+        <button className="image-button">Shop Now</button>
       </div>
     </div>
   )
