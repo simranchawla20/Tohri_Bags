@@ -6,6 +6,11 @@
     font-family: roboto-medium;
     src: url('../../Assets/Font-family/Roboto/Roboto-Bold.ttf');
 }
+@mixin homepageHeadings {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3.5px;
+}
 .topBlackBanner{
     background-color: black;
     color: white;
@@ -78,9 +83,7 @@
     gap: 20px;
 }
 .explore-categoryheading{
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 3.5px;
+    @include homepageHeadings;
 }
 .explore-categories-images-section {
     width: 80vw;
@@ -147,4 +150,90 @@
         font-weight: 600;
     }
   }
-  
+  .newest-release{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em
+  }
+  .newest-release-heading{
+    @include homepageHeadings;
+    display: flex;
+    width: 80vw;
+}
+.newest-release-carousal{
+    display: flex;
+    justify-content: space-between;
+    width: 99vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    .glide__track {
+        width: 80%;
+        margin: 0 auto;
+        height: fit-content;
+    }
+    .glide__slides {
+        height: fit-content;
+    }
+    
+    .glide__arrow--left {
+        position: absolute;
+        left: 1%;
+        top: 41% !important;
+        transform: translate(-50%, -50%);
+    }
+    
+    .glide__arrow--right {
+        position: absolute;
+        left: 96%;
+        top: 41% !important;
+        transform: translate(-50%, -50%);
+    }
+    
+    .glide__arrow {
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        align-items: center !important;
+        justify-items: center !important;
+        height: 43px !important;
+        width: 43px !important;
+        background-color: black !important;
+        border-radius: 100% !important;
+        box-shadow: 0px 2px 15px rgba(62, 84, 88, 0.075) !important;
+        border: none !important;
+        z-index: unset !important;
+        transform: unset !important;
+    }
+}
+.newest-card{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.newest-card-image-div{
+    width: 100%;
+    height: 19em;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.newest-product-details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.newest-product-name{
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: left;
+}
+.newest-product-price{
+    font-size: 15px;
+}

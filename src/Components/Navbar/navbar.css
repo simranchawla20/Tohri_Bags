@@ -1,0 +1,42 @@
+@font-face {
+  font-family: roboto-medium;
+  src: url("../../Assets/Font-family/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url("../../Assets/Font-family/Roboto/Roboto-Bold.ttf");
+}
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  justify-content: space-around;
+  padding: 1px 10em;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a bottom shadow with the desired color and intensity */
+  border-bottom: 1px solid #e0e0e0;
+}
+.navbarContainer .navbarItem {
+  font-size: 20px;
+  transition: font-size 0.3s ease;
+}
+.navbarContainer .navbarItem:hover {
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+.hamburgerImg {
+  width: 3em;
+}
+
+.logoImg {
+  width: 4em;
+}
+
+.navbarIcon {
+  display: flex;
+  gap: 2em;
+}
+
+.pointerCursor {
+  cursor: pointer;
+}/*# sourceMappingURL=navbar.css.map */
