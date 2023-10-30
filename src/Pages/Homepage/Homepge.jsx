@@ -13,6 +13,9 @@ import laptopBag from '../../Assets/Images/laptop bag.jpeg'
 import walletBag from '../../Assets/Images/wallet.jpeg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faHeart} from '@fortawesome/free-solid-svg-icons';
+import heart from '../../Assets/Images/heart-regular.svg'
 
 function Homepge() {
   useEffect(() => {
@@ -106,51 +109,6 @@ function Homepge() {
       <div className='newest-release'>
         <div className='newest-release-heading'>Get your hands on our Newest Releases</div>
         <div className='newest-release-carousal'>
-          {/* <div className='newest-card'>
-              <div className='newest-card-image-div'>
-                <img src={shoulderBag}></img>
-              </div>
-              <div className='newest-product-details'>
-                <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                <span className='newest-product-price'>Rs. 900.00</span>
-              </div>
-          </div>
-          <div className='newest-card'>
-              <div className='newest-card-image-div'>
-                <img src={shoulderBag}></img>
-              </div>
-              <div className='newest-product-details'>
-                <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                <span className='newest-product-price'>Rs. 900.00</span>
-              </div>
-          </div>
-          <div className='newest-card'>
-              <div className='newest-card-image-div'>
-                <img src={shoulderBag}></img>
-              </div>
-              <div className='newest-product-details'>
-                <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                <span className='newest-product-price'>Rs. 900.00</span>
-              </div>
-          </div>
-          <div className='newest-card'>
-              <div className='newest-card-image-div'>
-                <img src={shoulderBag}></img>
-              </div>
-              <div className='newest-product-details'>
-                <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                <span className='newest-product-price'>Rs. 900.00</span>
-              </div>
-          </div>
-          <div className='newest-card'>
-              <div className='newest-card-image-div'>
-                <img src={shoulderBag}></img>
-              </div>
-              <div className='newest-product-details'>
-                <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                <span className='newest-product-price'>Rs. 900.00</span>
-              </div>
-          </div> */}
           <div class="glide glide2">
             <div className="glide__track" data-glide-el="track">
                 <ul className="glide__slides">
@@ -158,6 +116,7 @@ function Homepge() {
                         <div className='newest-card'>
                           <div className='newest-card-image-div'>
                             <img src={shoulderBag}></img>
+                            <div className='likeCircle'><img src={heart}></img></div>
                           </div>
                           <div className='newest-product-details'>
                             <span className='newest-product-name'>tohri bag brown solid sling bag</span>
@@ -169,6 +128,7 @@ function Homepge() {
                         <div className='newest-card'>
                          <div className='newest-card-image-div'>
                             <img src={shoulderBag}></img>
+                            <div className='likeCircle'><img src={heart}></img></div>
                           </div>
                           <div className='newest-product-details'>
                             <span className='newest-product-name'>tohri bag brown solid sling bag</span>
@@ -180,6 +140,7 @@ function Homepge() {
                         <div className='newest-card'>
                           <div className='newest-card-image-div'>
                               <img src={shoulderBag}></img>
+                              <div className='likeCircle'><img src={heart}></img></div>
                             </div>
                             <div className='newest-product-details'>
                               <span className='newest-product-name'>tohri bag brown solid sling bag</span>
@@ -191,6 +152,7 @@ function Homepge() {
                         <div className='newest-card'>
                          <div className='newest-card-image-div'>
                             <img src={shoulderBag}></img>
+                            <div className='likeCircle'><img src={heart}></img></div>
                           </div>
                           <div className='newest-product-details'>
                             <span className='newest-product-name'>tohri bag brown solid sling bag</span>
@@ -202,6 +164,7 @@ function Homepge() {
                         <div className='newest-card'>
                          <div className='newest-card-image-div'>
                             <img src={shoulderBag}></img>
+                            <div className='likeCircle'><img src={heart}></img></div>
                           </div>
                           <div className='newest-product-details'>
                             <span className='newest-product-name'>tohri bag brown solid sling bag</span>
@@ -213,6 +176,7 @@ function Homepge() {
                         <div className='newest-card'>
                          <div className='newest-card-image-div'>
                             <img src={shoulderBag}></img>
+                            <div className='likeCircle'><img src={heart}></img></div>
                           </div>
                           <div className='newest-product-details'>
                             <span className='newest-product-name'>tohri bag brown solid sling bag</span>
