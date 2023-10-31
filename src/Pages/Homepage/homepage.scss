@@ -258,3 +258,28 @@
         height: 50%;
     }
 }
+.clearance-sale-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    align-items: center;
+    gap: 2em;
+}
+.sale-of-day-text{
+    @include homepageHeadings;
+}
+.clearance-sale-banner{
+    width: 100%;
+    position: relative;
+    height: 28em;
+}
+.saleOfDayBannerImg{
+    width: 100%;
+    height: 100%;
+}
+.clearance-sale-shop-btn{
+    position: absolute;
+    left: unset;
+    right: 3em;
+    bottom: 7em;
+}

@@ -16,6 +16,7 @@ import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
 import heart from '../../Assets/Images/heart-regular.svg'
+import saleOfDayBannerImg from '../../Assets/Images/clearance sale banner.png'
 
 function Homepge() {
   useEffect(() => {
@@ -212,6 +213,13 @@ function Homepge() {
                   <button class="glide__bullet" data-glide-dir="=4"></button>
               </div> */}
             </div>
+        </div>
+      </div>
+      <div className='clearance-sale-div'>
+        <span className='sale-of-day-text'>Sale of the Day</span>
+        <div className='clearance-sale-banner'>
+          <img src={saleOfDayBannerImg} className='saleOfDayBannerImg'></img>
+          <button className="image-button clearance-sale-shop-btn">Shop Now</button>
         </div>
       </div>
     </div>
