@@ -1,0 +1,41 @@
+.pointerCursor{
+    cursor: pointer;
+}
+.footerContainer{
+    display: flex;
+    background-color: black;
+    padding: 3em 0px 5em 0px;
+    justify-content: space-evenly;
+    .right-footer-cols{
+        display: flex;
+        justify-content: space-around;
+        flex: 4;
+    }
+    .footer-left-col{
+        flex: 1;
+        .logoImg{
+            width: 10em;
+        }
+    }
+    .footer-col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        .socialmedia-icons{
+            display: flex;
+            gap: 1em;
+            margin-top: 2em;
+            justify-content: center;
+        }
+        span{
+            font-size: 18px;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
