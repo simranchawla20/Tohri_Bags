@@ -23,6 +23,60 @@
         }
     }
 }
+.sidebar{
+    display: flex;
+    position: absolute;
+    top: 99px;
+    left: -30vw;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+    z-index: 2;
+    height: 88% ;
+    background: white;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.8s ease;
+    .sidebar-list{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 45px 0px;
+        align-items: start;
+        width: 100%;
+        .sidebar-item{
+            font-size: 20px;
+            padding: 17px 0 17px 45px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            &:hover{
+                background-color: #e5e8eb;
+            }
+        }
+    }
+    .sidebar-social{
+        display: flex;
+        gap: 13px;
+        padding: 22px 0 25px 45px;
+        align-items: center;
+    }
+}
+.sidebarVisible{
+    left:0;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 99px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust the overlay color and opacity as needed */
+    z-index: 1;
+}
+.overlayVisible {
+    display: block;
+}
 .hamburgerImg{
     width: 3em;
 }
