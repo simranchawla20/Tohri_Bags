@@ -1,0 +1,15 @@
+.bestsellers{
+    display: flex;
+    .bestseller-filter-section{
+        width: 20%;
+        flex-shrink: 0; 
+        // position: fixed; 
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .bestseller-product-list{
+        overflow-y: auto;
+        width: 80%;
+    }
+}

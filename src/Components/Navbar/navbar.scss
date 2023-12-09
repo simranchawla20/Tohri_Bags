@@ -45,10 +45,11 @@
         width: 100%;
         .sidebar-item{
             font-size: 20px;
-            padding: 17px 0 17px 45px;
+            padding: 17px 32px 17px 45px;
             width: 100%;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             &:hover{
                 background-color: #e5e8eb;
             }
