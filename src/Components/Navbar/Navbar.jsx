@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './navbar.scss'
 import hamburger from '../../Assets/Images/menu.svg'
 import crossNavbar from '../../Assets/Images/cross-navbar.png'
@@ -15,6 +15,14 @@ function Navbar() {
     setSidebarVisible(!sidebarVisible);
     toggleOverlay();
   }
+  useEffect(()=>{
+    if (window.location.pathname === "/") {
+      var navbarContainers = document.getElementsByClassName("navbarContainer");
+      if (navbarContainers.length > 0) {
+        navbarContainers[0].style.position = "relative";
+      }
+    }
+  },[])
   return (
     <>
       {overlayVisible ? <div className={`overlay ${overlayVisible ? 'overlayVisible' : ''}`} onClick={handleSidebar}></div> : ""}
@@ -22,7 +30,7 @@ function Navbar() {
           <img className="hamburgerImg pointerCursor" src={sidebarVisible ?crossNavbar :hamburger} onClick={handleSidebar} style={{ padding: sidebarVisible ? '10px' : '0px' }}></img>
           <Link className="navbarItem pointerCursor">Category</Link>
           <Link to="/bestsellers" className="navbarItem pointerCursor">Best Seller</Link>
-          <img className="logoImg pointerCursor" src={logo}></img>
+          <Link to="/" ><img className="logoImg pointerCursor" src={logo} ></img></Link>
           <Link className="navbarItem pointerCursor">Customised Bags</Link>
           <div className="navbarIcon">
             <FontAwesomeIcon icon={faMagnifyingGlass} className="pointerCursor"/>

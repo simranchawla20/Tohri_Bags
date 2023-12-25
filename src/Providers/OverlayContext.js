@@ -9,6 +9,15 @@ export const OverlayProvider = ({ children }) => {
     setOverlayVisible(!overlayVisible);
   };
   useEffect(() => {
+    if (window.location.pathname !== "/") {
+      var overlay = document.getElementsByClassName("overlay");
+      var sidebar = document.getElementsByClassName("sidebar");
+      if (overlay.length > 0 && sidebar.length>0) {
+        overlay[0].style.top = "66px";
+        sidebar[0].style.top = "67px";
+        sidebar[0].style.height = "92%";
+      }
+    }
     const body = document.body;
 
     if (overlayVisible) {
@@ -16,7 +25,7 @@ export const OverlayProvider = ({ children }) => {
     } else {
       body.style.overflow = 'visible';
     }
-
+    
     return () => {
       body.style.overflow = 'visible'; // Reset overflow when the component unmounts
     };

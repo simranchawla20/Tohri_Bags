@@ -150,6 +150,7 @@ function Homepge() {
     AOS.init();
   }, []);
 
+
   return (
     <div className='homepageContainer'> 
       <div className='topBlackBanner'>"Discover Your Signature Bag" - Our Customized Bag Collection is Live Now!</div>
