@@ -109,3 +109,25 @@ body:not([data-page=""]) .navbarContainer{
 .pointerCursor{
     cursor: pointer;
 }
+
+.categories_container{
+    position: absolute;
+    top: 4em;
+    background-color: white;
+    z-index: 1;
+    left: 25%;
+    padding: 2em;
+    .categories{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        max-width: 30em;
+        gap: 2.5em;
+        .category{
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
