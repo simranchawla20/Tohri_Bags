@@ -49,16 +49,16 @@ function Navbar() {
       </div>
       {showCategories ? <div className="categories_container">
         <ul className="categories">
-          <li className="category">Tote bags</li>
-          <li className="category">Sling Bags</li>
-          <li className="category">Shoulder Bags</li>
-          <li className="category">Laptop Bags</li>
-          <li className="category">HandBags</li>
-          <li className="category">Wallets</li>
-          <li className="category">Vanity Pouch</li>
-          <li className="category">Formal</li>
-          <li className="category">Party</li>
-          <li className="category">Holiday</li>
+          <Link to="/tote" className="category">Tote bags</Link>
+          <Link to="/sling" className="category">Sling Bags</Link>
+          <Link to="/shoulder" className="category">Shoulder Bags</Link>
+          <Link to="/laptop" className="category">Laptop Bags</Link>
+          <Link to="/handbags" className="category">HandBags</Link>
+          <Link to="/wallets" className="category">Wallets</Link>
+          <Link to="/vanity" className="category">Vanity Pouch</Link>
+          <Link to="/formal" className="category">Formal</Link>
+          <Link to="/party" className="category">Party</Link>
+          <Link to="/holiday" className="category">Holiday</Link>
         </ul>
       </div> : <></>}
       <div className={sidebarVisible ? "sidebar sidebarVisible" : "sidebar"}>

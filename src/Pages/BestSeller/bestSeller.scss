@@ -34,20 +34,94 @@
         flex-direction: column;
         align-items: start;
         padding: 0 1em;
+        .filters_applied{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding-bottom: 20px;
+            .item_applied{
+                padding: 1px 8px;
+                border-radius: 19px;
+                border: 1px solid black;
+            }
+        }
         .filter-item{
             font-size: 20px;
             font-family: roboto-regular;
-            border-bottom: 1px solid #dcdcdc;
+            border-top: 1px solid #dcdcdc;
             width: 100%;
             text-align: left;
             display: flex;
             justify-content: space-between;
             padding: 0.5em 0;
+            cursor: pointer;
+            &:first-child{
+                border-top: none !important;
+            }
+            &:last-child{
+                border-bottom: 1px solid #dcdcdc !important;
+            }
+        }
+        .price_range{
+            display: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+            padding: 20px 0px;
+            .price_range_inputs{
+                display: flex;
+                justify-content: space-between;
+                .low_range ,.high_range{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: 1px solid black;
+                    padding: 2px 7px;
+                    .from, .to{
+                        font-size: 10px;
+                    }
+                    input{
+                        width: 100px;
+                        outline: none
+                    };
+                }
+            }
+        }
+        .categories_filter{
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            align-items: start;
+            padding-left: 20px;
+            .category_item{
+                display: flex;
+                gap: 10px;
+            }
         }
     }
     .bestseller-product-list{
         overflow-y: auto;
         width: 80%;
         margin-left: auto;
+        .group{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .addToCartBtn{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 20px;
+            margin-top: 1em;
+            &:hover{
+                border: 1px solid white;
+            }
+            border-radius: 10%;
+        }
     }
 }
