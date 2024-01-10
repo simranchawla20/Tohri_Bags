@@ -5,8 +5,8 @@ const OverlayContext = createContext();
 export const OverlayProvider = ({ children }) => {
   const [overlayVisible, setOverlayVisible] = useState(false);
 
-  const toggleOverlay = () => {
-    setOverlayVisible(!overlayVisible);
+  const toggleOverlay = (bool) => {
+    setOverlayVisible(bool);
   };
   useEffect(() => {
     if (window.location.pathname !== "/") {

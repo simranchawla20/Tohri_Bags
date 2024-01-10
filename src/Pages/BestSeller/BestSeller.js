@@ -141,6 +141,7 @@ function BestSeller() {
     }
 
     const handleCategoryChange = (category) => {
+      debugger
       if (selectedCategories.includes(category)) {
         setSelectedCategories(selectedCategories.filter(item => item !== category));
       } else {
@@ -159,7 +160,6 @@ function BestSeller() {
     const handlePriceRemove = () => {
       setPriceFilter({ from: null, to: null });
     };
-    handlePriceRemove
 
     const handleInputChange = (event, field) => {
       const value = event.target.value;
@@ -182,7 +182,7 @@ function BestSeller() {
                     <div className="filters_applied">
                       {priceFilter.from!=null || priceFilter.to!=null ? <span className="item_applied">{`Rs. ${priceFilter.from ? priceFilter.from : 0} - ${priceFilter.to ? priceFilter.to : 1950}`} <FontAwesomeIcon icon={faXmark} onClick={handlePriceRemove} style={{cursor: "pointer"}}/></span> : "" }
                       {selectedCategories.map(selectedCategory => (
-                        <span className="item_applied" key={selectedCategory}>{selectedCategory} <FontAwesomeIcon icon={faXmark} onClick={handleCategoryRemove(selectedCategory)} style={{cursor: "pointer"}}/></span>
+                        <span className="item_applied" key={selectedCategory}>{selectedCategory} <FontAwesomeIcon icon={faXmark} onClick={()=>{handleCategoryRemove(selectedCategory)}} style={{cursor: "pointer"}}/></span>
                       ))}
                     </div> 
                     : ""
