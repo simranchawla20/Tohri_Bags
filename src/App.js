@@ -8,6 +8,7 @@ import BestSeller from './Pages/BestSeller/BestSeller';
 import React , {useEffect } from 'react';
 import CustomisedBags from './Pages/CustomisedBags/CustomisedBags';
 import CategoryCommon from './Components/CategoryCommon/CategoryCommon';
+import NewArrival from './Pages/NewArrivals/NewArrival';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/formal" element={<CategoryCommon category="Formal"/>}></Route>
           <Route path="/party" element={<CategoryCommon category="Party"/>}></Route>
           <Route path="/holiday" element={<CategoryCommon category="Holiday"/>}></Route>
+          <Route path="/new_arrivals" element={<NewArrival/>}></Route>
         </Routes>
       </div>
     </OverlayProvider>

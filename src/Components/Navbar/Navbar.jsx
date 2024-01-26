@@ -14,6 +14,7 @@ function Navbar() {
   const { overlayVisible, toggleOverlay } = useOverlay();
   const [showCategories, setShowCategories] = useState(false);
   const [categorybarVisible, setCategorybarVisible] = useState(false);
+  const [occasionbarVisible, setOccasionbarVisible] = useState(false);
 
   useEffect(()=>{
     if (window.location.pathname === "/") {
@@ -36,6 +37,10 @@ function Navbar() {
 
   const toggleCategoryBar = () => {
     setCategorybarVisible(!categorybarVisible);
+  };
+
+  const toggleOccasionBar = () => {
+    setOccasionbarVisible(!occasionbarVisible);
   };
 
   return (
@@ -71,8 +76,8 @@ function Navbar() {
       <div className={sidebarVisible ? "sidebar sidebarVisible" : "sidebar"}>
         <ul className="sidebar-list">
           <li className="sidebar-item pointerCursor" onClick={toggleCategoryBar}>Category<FontAwesomeIcon icon={faArrowRight}/></li>
-          <li className="sidebar-item pointerCursor">Shop by Occasion <FontAwesomeIcon icon={faArrowRight} /></li>
-          <Link className="sidebar-item pointerCursor">New Arrivals</Link>
+          <li className="sidebar-item pointerCursor" onClick={toggleOccasionBar}>Shop by Occasion <FontAwesomeIcon icon={faArrowRight} /></li>
+          <Link to="/new_arrivals"className="sidebar-item pointerCursor">New Arrivals</Link>
           <Link to="/bestsellers" className="sidebar-item pointerCursor">Best Seller</Link>
         </ul>
         {categorybarVisible ?
@@ -88,6 +93,16 @@ function Navbar() {
               <Link to="/vanity" className="category" onClick={()=>{handleSidebar(); toggleCategoryBar();}}><FontAwesomeIcon icon={faChevronRight} /> Vanity Pouch</Link>
               <Link to="/formal" className="category" onClick={()=>{handleSidebar(); toggleCategoryBar();}}><FontAwesomeIcon icon={faChevronRight} /> Fromal Bags</Link>
               <Link to="/party" className="category" onClick={()=>{handleSidebar(); toggleCategoryBar();}}><FontAwesomeIcon icon={faChevronRight} /> Party Bags</Link>
+              <Link to="/holiday" className="category" onClick={()=>{handleSidebar(); toggleCategoryBar();}}><FontAwesomeIcon icon={faChevronRight} /> Holiday Bags</Link>
+            </ul>
+          </div> 
+          :<></>}
+          {occasionbarVisible ?
+          <div className={`category-dropdown ${sidebarVisible ? 'open' : ''}`}>
+            <span onClick={toggleOccasionBar}><FontAwesomeIcon icon={faArrowLeft} className="back-arrow pointerCursor"/> Back</span>
+            <ul className="category-list">
+              <Link to="/party" className="category" onClick={()=>{handleSidebar(); toggleCategoryBar();}}><FontAwesomeIcon icon={faChevronRight} /> Party Bags</Link>
+              <Link to="/formal" className="category" onClick={()=>{handleSidebar(); toggleCategoryBar();}}><FontAwesomeIcon icon={faChevronRight} /> Formal Bags</Link>
               <Link to="/holiday" className="category" onClick={()=>{handleSidebar(); toggleCategoryBar();}}><FontAwesomeIcon icon={faChevronRight} /> Holiday Bags</Link>
             </ul>
           </div> 
