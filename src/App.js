@@ -9,6 +9,8 @@ import React , {useEffect } from 'react';
 import CustomisedBags from './Pages/CustomisedBags/CustomisedBags';
 import CategoryCommon from './Components/CategoryCommon/CategoryCommon';
 import NewArrival from './Pages/NewArrivals/NewArrival';
+import Cart from './Pages/Cart/Cart';
+import Checkout from './Pages/Checkout/Checkout';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/party" element={<CategoryCommon category="Party"/>}></Route>
           <Route path="/holiday" element={<CategoryCommon category="Holiday"/>}></Route>
           <Route path="/new_arrivals" element={<NewArrival/>}></Route>
+          <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/checkout" element={<Checkout/>}></Route>
         </Routes>
       </div>
     </OverlayProvider>

@@ -55,7 +55,7 @@ function Navbar() {
           <div className="navbarIcon">
             <FontAwesomeIcon icon={faMagnifyingGlass} className="pointerCursor"/>
             <FontAwesomeIcon icon={faHeart} className="pointerCursor"/>
-            <FontAwesomeIcon icon={faShoppingCart} className="pointerCursor"/>
+            <Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} className="pointerCursor"/></Link>
             <FontAwesomeIcon icon={faUser} className="pointerCursor"/>
           </div>
       </div>
