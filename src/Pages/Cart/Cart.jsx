@@ -1,10 +1,8 @@
 import React from 'react'
 import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
 import Navbar from '../../Components/Navbar/Navbar'
 import './Cart.scss'
 import { Link } from 'react-router-dom'
-// import { XMarkIcon } from '@heroicons/react/24/outline'
 
 function Cart() {
     const products = [

@@ -19,6 +19,7 @@ import heart from '../../Assets/Images/heart-regular.svg'
 import saleOfDayBannerImg from '../../Assets/Images/clearance sale banner.png'
 import Footer from '../../Components/Footer/Footer';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Homepge() {
   const reviews = [
@@ -213,78 +214,22 @@ function Homepge() {
           <div class="glide glide2">
             <div className="glide__track" data-glide-el="track">
                 <ul className="glide__slides">
-                    <li className="glide__slide">
-                        <div className='newest-card'>
-                          <div className='newest-card-image-div'>
-                            <img src={shoulderBag}></img>
-                            <div className='likeCircle'><img src={heart}></img></div>
-                          </div>
-                          <div className='newest-product-details'>
-                            <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                            <span className='newest-product-price'>Rs. 900.00</span>
-                          </div>
-                        </div>
-                    </li>
-                    <li className="glide__slide">
-                        <div className='newest-card'>
-                         <div className='newest-card-image-div'>
-                            <img src={shoulderBag}></img>
-                            <div className='likeCircle'><img src={heart}></img></div>
-                          </div>
-                          <div className='newest-product-details'>
-                            <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                            <span className='newest-product-price'>Rs. 900.00</span>
-                          </div>
-                        </div>
-                    </li>
-                    <li className="glide__slide">
-                        <div className='newest-card'>
-                          <div className='newest-card-image-div'>
+                    {[0, 1, 2, 3, 4].map((rating) => (
+                        <li className="glide__slide" key={rating}>
+                          <div className='newest-card'>
+                            <div className='newest-card-image-div'>
                               <img src={shoulderBag}></img>
                               <div className='likeCircle'><img src={heart}></img></div>
                             </div>
                             <div className='newest-product-details'>
-                              <span className='newest-product-name'>tohri bag brown solid sling bag</span>
+                              <Link to="/details" className='text-left'>
+                                <span className='newest-product-name'>tohri bag brown solid sling bag</span>
+                              </Link>
                               <span className='newest-product-price'>Rs. 900.00</span>
+                            </div>
                           </div>
-                        </div>
-                    </li>
-                    <li className="glide__slide">
-                        <div className='newest-card'>
-                         <div className='newest-card-image-div'>
-                            <img src={shoulderBag}></img>
-                            <div className='likeCircle'><img src={heart}></img></div>
-                          </div>
-                          <div className='newest-product-details'>
-                            <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                            <span className='newest-product-price'>Rs. 900.00</span>
-                          </div>
-                        </div>
-                    </li>
-                    <li className="glide__slide">
-                        <div className='newest-card'>
-                         <div className='newest-card-image-div'>
-                            <img src={shoulderBag}></img>
-                            <div className='likeCircle'><img src={heart}></img></div>
-                          </div>
-                          <div className='newest-product-details'>
-                            <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                            <span className='newest-product-price'>Rs. 900.00</span>
-                          </div>
-                        </div>
-                    </li>
-                    <li className="glide__slide">
-                        <div className='newest-card'>
-                         <div className='newest-card-image-div'>
-                            <img src={shoulderBag}></img>
-                            <div className='likeCircle'><img src={heart}></img></div>
-                          </div>
-                          <div className='newest-product-details'>
-                            <span className='newest-product-name'>tohri bag brown solid sling bag</span>
-                            <span className='newest-product-price'>Rs. 900.00</span>
-                          </div>
-                        </div>
-                    </li>
+                        </li>
+                    ))}
                 </ul>
               </div>
               <div class="glide__arrows" data-glide-el="controls">

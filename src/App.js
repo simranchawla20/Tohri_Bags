@@ -11,6 +11,7 @@ import CategoryCommon from './Components/CategoryCommon/CategoryCommon';
 import NewArrival from './Pages/NewArrivals/NewArrival';
 import Cart from './Pages/Cart/Cart';
 import Checkout from './Pages/Checkout/Checkout';
+import ProductDetails from './Components/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/new_arrivals" element={<NewArrival/>}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
           <Route path="/checkout" element={<Checkout/>}></Route>
+          <Route path="/details" element={<ProductDetails/>}></Route>
         </Routes>
       </div>
     </OverlayProvider>
